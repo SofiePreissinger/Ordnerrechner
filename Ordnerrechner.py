@@ -37,7 +37,7 @@ def print_directory_sizes(pfad):
 if __name__ == "__main__":
     try:
         while True:
-            target_directory = input("Bitte geben Sie den Dateipfad eines Orderners ein \n oder 'b' um das programm zu schließen : ")
+            target_directory = input("Bitte geben Sie den Dateipfad eines Ordners ein\noder 'b' um das programm zu schließen : ")
             if target_directory.lower() == 'b':
                 break
 
