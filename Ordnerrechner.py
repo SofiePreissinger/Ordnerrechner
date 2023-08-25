@@ -36,10 +36,16 @@ def print_directory_sizes(pfad):
 
 if __name__ == "__main__":
     try:
-        target_directory = input("Bitte geben Sie den Dateipfad eines Orderners ein: ")
-        print("Ordner wird gescannt...\n")
-        print_directory_sizes(target_directory)
+        while True:
+            target_directory = input("Bitte geben Sie den Dateipfad eines Orderners ein oder 'b' um das programm zu schließen : ")
+            if target_directory.lower() == 'b':
+                break
+
+            print("Ordner wird gescannt...\n")
+            print_directory_sizes(target_directory)
+            print("Scan abgeschlossen...\n")
     except KeyboardInterrupt:
         print("Scann vom Benutzer unterbrochen.")
     except Exception as e:
         print(f"Ein unerwarteter Fehler ist aufgetreten.")
+
